@@ -1,26 +1,30 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: UFMG. Clube Atlético Mineiro.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p> </p>
+    <p>
+    <p> </p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+news: false # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My name is Leo, I'm 23 and I live in Belo Horizonte, Brazil. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am currently a Data Scientist at <a href='https://twitter.com/atletico/'>Clube Atlético Mineiro</a> and a Computer Science MSc. student at <a href='https://ufmg.br/'>UFMG</a>, where I am also a researcher at the <a href='https://salabufmg.github.io'>Sports Analytics Lab</a>. I received my Bachelor's degree in pure Mathematics from UFMG as well.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My primary areas of interest are Data Science and Machine Learning, with focus on Football/Soccer Analytics. I find it fascinating to explore mathematical concepts and their applications in contexts that I'm passionate about. My work involves using data-driven approaches to gain insights into sports performance and athletes evaluation. 
+
+I also have experience teaching Mathematics.
+
+Thank you for visiting and please feel free to contact me if you have any questions or are interested in collaborating on a project!

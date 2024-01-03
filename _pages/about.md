@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My name is Leo, I'm 23 and I live in Belo Horizonte, Brazil. 
+My name is Leo, I'm 24 and I live in Belo Horizonte, Brazil. 
 
 I am currently a Data Scientist at <a href='https://twitter.com/atletico/'>Clube Atlético Mineiro</a> and a Computer Science MSc. student at <a href='https://ufmg.br/'>UFMG</a>, where I am also a researcher at the <a href='https://salabufmg.github.io'>Sports Analytics Lab</a>. I received my Bachelor's degree in pure Mathematics from UFMG as well.
 

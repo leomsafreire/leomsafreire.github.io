@@ -23,7 +23,7 @@ My name is Leo, I'm 24 and I live in Belo Horizonte, Brazil.
 
 I am currently a Data Scientist at <a href='https://twitter.com/atletico/'>Clube Atlético Mineiro</a> and a Computer Science MSc. student at <a href='https://ufmg.br/'>UFMG</a>, where I am also a researcher at the <a href='https://salabufmg.github.io'>Sports Analytics Lab</a>. I received my Bachelor's degree in pure Mathematics from UFMG as well.
 
-My primary areas of interest are Data Science and Machine Learning, with focus on Football/Soccer Analytics. I find it fascinating to explore mathematical concepts and their applications in contexts that I'm passionate about. My work involves using data-driven approaches to gain insights into sports performance and athletes evaluation. 
+My primary areas of interest are Data Science and Machine Learning, focused on  Football (Soccer) Analytics. I find it fascinating to explore mathematical concepts and their applications in contexts that I'm passionate about. My work involves using data-driven approaches to gain insights into sports performance and athletes evaluation. 
 
 I also have experience teaching Mathematics.
 

@@ -1,8 +1,8 @@
 ---
+layout: page
 title: Brasil70
-category: 
+description: "Brasil - World Cup 1970"
+img: "Brasil - World Cup 1970"
 importance: 1
-link: https://brasil70.streamlit.app/
-description: "Brasil - World Cup 1970 "
-image: /assets/img/brasil70.png
+category:
 ---

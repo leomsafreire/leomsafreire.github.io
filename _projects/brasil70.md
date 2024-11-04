@@ -8,4 +8,5 @@ category:
 ---
 
 [Click here to open project](https://brasil70.streamlit.app/)
-![Lineup Image](assets/img/b70_lineup.jpg)
+<img src="assets/img/b70_lineup.jpg" alt="Lineup Image" style="width: 100%; display: block; margin: 0 auto;">
+

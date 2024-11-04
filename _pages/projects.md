@@ -50,9 +50,7 @@ horizontal: false
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      <a href="{{ project.link }}" target="_blank">
       {% include projects.html %}
-       </a>
 
     {%- endfor %}
   </div>

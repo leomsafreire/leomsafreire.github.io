@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: true
 nav_order: 2
-display_categories: [work]
+display_categories: 
 horizontal: false
 ---
 
@@ -50,7 +50,10 @@ horizontal: false
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
+      <a href="{{ project.link }}" target="_blank">
       {% include projects.html %}
+       </a>
+
     {%- endfor %}
   </div>
   {%- endif -%}

@@ -1,6 +1,6 @@
 ---
 title: Brasil70
-category: work
+category: 
 importance: 1
 link: https://brasil70.streamlit.app/
 description: "Brasil - World Cup 1970 "

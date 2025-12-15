@@ -1,9 +1,9 @@
 {
   "basics": {
-    "name": "Leo M. Sá-Freire",
+    "name": "Leo Sá Freire",
     "label": "",
     "image": "",
-    "email": "7leomartins7@gmail.com",
+    "email": "",
     "phone": "",
     "url": "",
     "summary": "",
@@ -23,11 +23,20 @@
   "work": [
     {
       "name": "Clube Atlético Mineiro",
+      "position": "Head of Football Analytics",
+      "url": "https://atletico.com.br",
+      "startDate": "2023",
+      "endDate": "present",
+      "summary": "Manage the club’s entire football data journey — from raw ingestion to advanced reporting.",
+      "highlights": []
+    },
+    {
+      "name": "Clube Atlético Mineiro",
       "position": "Data Scientist",
       "url": "https://atletico.com.br",
       "startDate": "2023",
       "endDate": "present",
-      "summary": "Building models with sports data to unlock insights on performance and athletes evaluation.",
+      "summary": "Building models and frameworks with football data to empower recruitment, strategy and performance analysis.",
       "highlights": []
     },
         {

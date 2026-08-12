@@ -1,16 +1,330 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Front matter is required so Jekyll compiles this file into main.css.
 ---
-@charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
+/* -------------------------------------------------------------------------
+   Tokens
+   ---------------------------------------------------------------------- */
 
-@import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill",
-  "cv"
-;
+:root {
+  --bg: #fdfdfc;
+  --text: #16161a;
+  --muted: #6e6e73;
+  --rule: #e2e1dd;
+
+  --measure: 36rem;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131315;
+    --text: #e6e5e1;
+    --muted: #93928c;
+    --rule: #2b2b2e;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Base
+   ---------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--muted);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+/* -------------------------------------------------------------------------
+   Frame
+   ---------------------------------------------------------------------- */
+
+.site-header,
+main,
+.site-footer {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 3.5rem 0 0;
+  margin-bottom: 3.5rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+.site-header .brand {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.site-footer {
+  margin-top: 6rem;
+  padding: 1.5rem 0 3.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* -------------------------------------------------------------------------
+   Headings
+   ---------------------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.011em;
+}
+
+h1 {
+  margin: 0 0 2.25rem;
+  font-size: 1.6rem;
+}
+
+/* On the about page the subtitle carries the gap instead. */
+h1.name {
+  margin-bottom: 0.35em;
+  font-size: 1.9rem;
+}
+
+h2 {
+  margin: 2.5em 0 0.75em;
+  font-size: 1.15rem;
+}
+
+.subtitle {
+  margin: 0 0 2.5rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+}
+
+/* -------------------------------------------------------------------------
+   About page
+   ---------------------------------------------------------------------- */
+
+.portrait {
+  float: right;
+  width: 8.5rem;
+  margin: 0.2rem 0 1.5rem 2rem;
+  border-radius: 2px;
+}
+
+.profile-links {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  list-style: none;
+  margin: 3rem 0 0;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+}
+
+.profile-links a {
+  color: var(--muted);
+}
+
+.profile-links a:hover {
+  color: var(--text);
+}
+
+/* -------------------------------------------------------------------------
+   Publications
+   ---------------------------------------------------------------------- */
+
+.publications {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  column-gap: 1rem;
+}
+
+.publications h2.bibliography,
+.publications h3.bibliography {
+  grid-column: 1;
+  margin: 0;
+  padding-top: 0.28rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.publications ol.bibliography {
+  grid-column: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.publications ol.bibliography > li + li {
+  margin-top: 2rem;
+}
+
+.publications h2.bibliography ~ h2.bibliography,
+.publications ol.bibliography ~ ol.bibliography {
+  margin-top: 3rem;
+}
+
+.pub-title {
+  margin: 0 0 0.2em;
+  line-height: 1.4;
+}
+
+.pub-authors,
+.pub-venue {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.pub-authors .self {
+  color: var(--text);
+}
+
+.pub-links {
+  margin: 0.45rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+}
+
+.pub-links a {
+  color: var(--muted);
+}
+
+.pub-links a:hover {
+  color: var(--text);
+}
+
+/* -------------------------------------------------------------------------
+   Narrow screens
+   ---------------------------------------------------------------------- */
+
+@media (max-width: 34rem) {
+  body {
+    font-size: 1rem;
+  }
+
+  .site-header {
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .portrait {
+    float: none;
+    display: block;
+    width: 7rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .publications {
+    grid-template-columns: 1fr;
+  }
+
+  .publications h2.bibliography,
+  .publications h3.bibliography {
+    grid-column: 1;
+    padding-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .publications ol.bibliography {
+    grid-column: 1;
+  }
+
+  .publications ol.bibliography ~ h2.bibliography {
+    margin-top: 3rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Print
+   ---------------------------------------------------------------------- */
+
+@media print {
+  .site-header nav,
+  .site-footer {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+}
